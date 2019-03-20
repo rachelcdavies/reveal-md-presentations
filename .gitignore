@@ -3,3 +3,4 @@ node_modules
 dist
 _static
 .vscode
+.DS_Store
