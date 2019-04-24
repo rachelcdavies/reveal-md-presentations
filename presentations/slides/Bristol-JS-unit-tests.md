@@ -143,7 +143,7 @@ Some test frameworks test the whole application from the outside.
 Others help us write tests for smaller parts of an application
 
 ----
-## Anatomy of a Test 3As
+## Anatomy of a Test
 
 * Arrange: 
     * setup preconditions and inputs
@@ -152,9 +152,9 @@ Others help us write tests for smaller parts of an application
 * Assert: 
     * expected results have occurred
 
----
+----
 
-##### Example
+##### Example of 3As
 
 ``` javascript
 
@@ -177,20 +177,19 @@ There are lots of frameworks to help you write tests, such as Tape, Mocha, Ava, 
 Some test frameworks test the whole application from the outside.
 Others help us write tests for smaller parts of an application
 
----
+----
 
 ## Tests as Documentation
 
 * Tests illustrate what your code does
 * Examples show what data it handles
-* Test cases so how it handles error cases
+* Test cases show how it handles error cases
 
 Notes: 
-Tests can be used as a way to document your code.
 
 ----
 
-##### Example
+##### Another Example
 
 ``` javascript
 describe('email', () => {
@@ -238,24 +237,222 @@ https://www.martinfowler.com/bliki/UnitTest.html
 Notes: 
 
 
----
+----
 
-# Trade-Off?
+## React Component
+
+###  with 2 render states
+
+![Upload button](../images/upload-button-design.png)
+
+![Trash button](../images/trash-design.png)
 
 ----
 
-# Obvious Benefits :-)
+## React Component with 2 states
 
-* Quick automatic checking code works
+
+``` javascript
+describe('image input', () => {
+  it('renders with upload button when no image url', () => {
+    const wrapper = mount(<ImageInput />);
+    assert.include(wrapper.html(), 'Upload image');
+  });
+  it('renders with trash button when image url is present', () => {
+    const imageUrl = 'https://www.tes.com/cdn/marketing/1554893062093-kitten-200x100.jpg';
+    const wrapper = mount(<ImageInput value={imageUrl} />);
+    assert.include(wrapper.html(), 'kitten-200x100.jpg');
+    assert.include(wrapper.html(), 'name="deleteImage"');
+  });
+  it('renders upload button when image url is deleted', () => {
+    const imageUrl = 'https://www.tes.com/cdn/marketing/1554893062093-kitten-200x100.jpg';
+    const wrapper = mount(<ImageInput value={imageUrl} />);
+    wrapper.find('button').simulate('click');
+    assert.include(wrapper.html(), 'Upload image');
+  });
+```
+
+Notes:
+
+----
+
+## Further Reading
+
+#### Tutorial on React Component Tests
+
+https://www.robinwieruch.de/react-testing-tutorial
+
+----
+
+## GraphQL Component
+
+``` javascript
+import React from 'react';
+import { describe } from 'mocha';
+import { assert } from 'chai';
+import Adapter from 'enzyme-adapter-react-16';
+import { MockedProvider } from 'react-apollo/test-utils';
+import { configure, mount } from 'enzyme';
+import wait from 'waait';
+
+import { LIST_COMPONENTS_FOR_SLOT } from '../../src/common/queries/ListComponents';
+import { ComponentSelectorContainer } from '../../src/common/components/ComponentSelectorContainer';
+
+const slotId = 123;
+
+const component1 = {
+  id: 1,
+  name: 'Super cool component',
+  props: {
+    contextSchema: {
+      properties: {
+        name: {
+          type: 'string',
+          group: 'content',
+        },
+      },
+    },
+  },
+  __typename: 'Component',
+};
+
+
+const component2 = {
+  id: 2,
+  name: 'Yet another cool component',
+  props: {
+    contextSchema: {
+      properties: {
+        name: {
+          type: 'string',
+          group: 'content',
+        },
+      },
+    },
+  },
+  __typename: 'Component',
+};
+
+const mockEmptyQuery = {
+  request: {
+    query: LIST_COMPONENTS_FOR_SLOT,
+    variables: {
+      slotId,
+    },
+  },
+  result: {
+    data: {
+      listComponentsForSlot: [],
+    },
+  },
+};
+
+const mockEmptyQueryWithoutSlotId = {
+  request: {
+    query: LIST_COMPONENTS_FOR_SLOT,
+    variables: {
+      slotId: null,
+    },
+  },
+  result: {
+    data: {
+      listComponentsForSlot: [],
+    },
+  },
+};
+
+
+const mockQuery = {
+  request: {
+    query: LIST_COMPONENTS_FOR_SLOT,
+    variables: {
+      slotId,
+    },
+  },
+  result: {
+    data: {
+      listComponentsForSlot: [
+        component1,
+        component2,
+      ],
+    },
+  },
+};
+
+configure({ adapter: new Adapter() });
+
+describe('component selector', () => {
+  it('renders when no components available for a given slot', async () => {
+    const wrapper = mount(
+      <MockedProvider mocks={[mockEmptyQuery]}>
+        <ComponentSelectorContainer slotId={slotId} setSelectedComponent={() => {}} />
+      </MockedProvider>,
+    );
+    await wait(0);
+    wrapper.update();
+
+    assert.equal(wrapper.find('select').length, 1);
+    assert.equal(wrapper.find('option').length, 0);
+  });
+
+  it('renders a message when no slot is selected', async () => {
+    const wrapper = mount(
+      <MockedProvider mocks={[mockEmptyQueryWithoutSlotId]}>
+        <ComponentSelectorContainer slotId={null} setSelectedComponent={() => {}} />
+      </MockedProvider>,
+    );
+    await wait(0);
+    wrapper.update();
+
+    assert.equal(wrapper.find('select').length, 0);
+    assert.equal(wrapper.find('option').length, 0);
+    assert.include(wrapper.html(), 'Please select a slot');
+  });
+
+  it('renders when two components available for a given slot', async () => {
+    const wrapper = mount(
+      <MockedProvider mocks={[mockQuery]}>
+        <ComponentSelectorContainer slotId={slotId} setSelectedComponent={() => {}} />
+      </MockedProvider>,
+    );
+    await wait(0);
+    wrapper.update();
+
+    assert.equal(wrapper.find('select').length, 1);
+    assert.equal(wrapper.find('option').length, 2);
+    assert.include(wrapper.html(), component1.name);
+    assert.include(wrapper.html(), component2.name);
+  });
+});
+
+```
+
+----
+
+## Read more
+
+https://www.apollographql.com/docs/react/recipes/testing
+
+---
+
+# The Trade-Offs?
+
+Notes: 
+
+----
+
+## Obvious Benefits :-)
+
+* Quick automatic checking that the code works
 * Write once, run many times
 * Documentation for future developers
 
 ----
 
-# Obvious Cost :-(
+## Obvious Cost :-(
 
-* Takes time to write
-* Take more time to maintain as code changes
+* Takes time to write tests
+* Takes time to maintain tests as code changes
 * May be a barrier to refactoring code
 
 ----
@@ -277,26 +474,10 @@ Test first?
 ## When not to write unit tests?
 
 * Time consuming and fiddly to setup
-* Area of code that likely change
-* When intention is obvious
+* Area of code that is likely to change
+* When what code does is obvious and trivial
 
 Notes: 
-
----
-
-# More Examples
-
-----
-
-## React Component
-
-https://www.robinwieruch.de/react-testing-tutorial
-
-----
-
-## GraphQL Component
-
-https://www.apollographql.com/docs/react/recipes/testing
 
 ---
 
@@ -312,7 +493,7 @@ Notes: Summing up ^^
 ---
 
 ## Thank You
-#### @tes_engineering
+#### @rachelcdavies @tes_engineering
 ![Tes Logo](../images/tes-career-hero.png)
 
 Notes: We're hiring :-)
