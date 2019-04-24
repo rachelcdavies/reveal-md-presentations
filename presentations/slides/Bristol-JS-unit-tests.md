@@ -64,7 +64,8 @@ Who prefers not to write unit-tests?
 
 ---
 
-# Introduction to Tests
+# Introduction to 
+# to Unit Tests
 
 ----
 
@@ -215,16 +216,6 @@ describe('email', () => {
   
   Notes: 
 
-----
-
-## Test Doubles
-
-* Stubs
-* Mocks
-* Spies
-
-Notes: 
-Test-doubles stand in for code that the subject of the test relies on.
 
 ----
 
@@ -236,6 +227,16 @@ https://www.martinfowler.com/bliki/UnitTest.html
 
 Notes: 
 
+----
+
+## Test Doubles
+
+* Stubs
+* Mocks
+* Spies
+
+Notes: 
+Test-doubles stand in for code that the subject of the test relies on.
 
 ----
 
