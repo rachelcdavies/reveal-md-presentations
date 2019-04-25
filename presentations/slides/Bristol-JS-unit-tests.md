@@ -117,7 +117,7 @@ describe('Array object', () =>{
     // a test case
     it('should return negative index when not present', () =>  {
 
-      const arrayUnderTest = ['banana, apricot'];
+      const arrayUnderTest = ['banana', 'apricot'];
 
       const result = arrayUnderTest.indexOf('apple');
 
@@ -163,7 +163,7 @@ describe('indexOf', () => {
     // a test case
     it('should return negative index when not present', () =>  {
       // Arrange
-      const arrayUnderTest = ['banana, apricot'];
+      const arrayUnderTest = ['banana', 'apricot'];
       const expectedResult = -1;
       // Act
       const result = arrayUnderTest.indexOf('apple');
