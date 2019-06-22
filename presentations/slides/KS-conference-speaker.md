@@ -21,7 +21,7 @@ At a previous workplace, I ran a Conference Club to help people there become con
 
 Time & effort
 
-![Hourglass](../images/hourglass.jpg)
+![Hourglass](images/hourglass.jpg)
 
 Notes:  Like open-source this is mostly done in your spare time
 
@@ -29,13 +29,13 @@ Notes:  Like open-source this is mostly done in your spare time
 
 ## Increase your chances
 
-![Dice](../images/dice.jpg)
+![Dice](images/dice.jpg)
 
 ---
 
 ## Picking a topic
 
-![Hearts](../images/hearts.png)
+![Hearts](images/hearts.png)
 
 Notes:  Passion gives energy to your talk. 
 If you speak about something you care about then it comes across to the audience.
@@ -58,7 +58,7 @@ http://www.noelrappin.com/railsrx/2014/1/18/conference-prompts-or-how-to-submit-
 
 ## Seek Feedback
 
-![Audience](../images/audience.png)
+![Audience](images/audience.png)
 
 Notes:  Ask someone to read your asbtract. What do they think?
 People often miss this step because of deadline
@@ -68,7 +68,7 @@ Test out your talk with a live audience. What's their feedback?
 ---
 ## Start Small
 
-![Lightning](../images/lightning.jpg)
+![Lightning](images/lightning.jpg)
 
 Notes: 
 Meetups are often on the look out for talks.
@@ -78,7 +78,7 @@ Helps you build up a track record
 ---
 ## Pair presenting
 
-![Pears](../images/pears.jpg)
+![Pears](images/pears.jpg)
 
 Notes: for hands-on workshops and talks you can also try presenting with someone else more experienced.
 
@@ -86,7 +86,7 @@ Notes: for hands-on workshops and talks you can also try presenting with someone
 
 ## Balancing Topics
 
-![Dinner Party](../images/dinner-party.jpg)
+![Dinner Party](images/dinner-party.jpg)
 
 Notes: Just like creating a dinner party menu, a conference organisaer wants to create a balanced programme with something to suit eveyone
 
@@ -110,7 +110,7 @@ Remember that it has to be an event that you will enjoy attending
 
 ## Reviewer Perspective
 
-![boots](../images/orange_boots.png)
+![boots](images/orange_boots.png)
 
 Notes: Put yourself in the shoes of the reviewer. 
 They are typically volunteers reviewing a lot of proposals after work. They have industry experience.

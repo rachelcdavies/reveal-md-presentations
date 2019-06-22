@@ -1,6 +1,6 @@
 # Fixing problems for good
 
-![Six Action Shoes](../images/sixactionshoes.jpg)
+![Six Action Shoes](images/sixactionshoes.jpg)
 
 Six Action Shoes written by Edward de Bono, 1992
 
@@ -17,7 +17,7 @@ I will explain what each of the shoes is in this system and then summarise.
 
 Orange = Emergency Action
 
-![Orange Gumboots](../images/orange_boots.png)
+![Orange Gumboots](images/orange_boots.png)
 
 Notes: what is a quick thing you can do to buy time to solve the problem? 
 Often we rollback code or switch services off.
@@ -26,7 +26,7 @@ Often we rollback code or switch services off.
 
 Brown = Practical Steps
 
-![Brown Brogues](../images/brown_shoes.png)
+![Brown Brogues](images/brown_shoes.png)
 
 Notes: let customer service team know, prepare an explanation for non-technical people.
 Divert team to help you. Let other teams know if they will be impacted.
@@ -35,7 +35,7 @@ Divert team to help you. Let other teams know if they will be impacted.
 
 Grey = Information Gathering
 
-![Grey Sneakers](../images/grey_shoes.png)
+![Grey Sneakers](images/grey_shoes.png)
 
 Notes: Do you understand the problem? check logs, look into database
 
@@ -43,7 +43,7 @@ Notes: Do you understand the problem? check logs, look into database
 
 Navy = Follow Process
 
-![Navy Formal](../images/navy_shoes.png)
+![Navy Formal](images/navy_shoes.png)
 
 Notes: At TES we have systems in place to support the engineers when we are faced with a problem that may risk damage to our users and their personal data.
        We have a WAR ROOM and PEs write up post-mortem reports.
@@ -53,7 +53,7 @@ Notes: At TES we have systems in place to support the engineers when we are face
 
 Purple = Get Authority
 
-![Purple Boots](../images/purple-boots.png)
+![Purple Boots](images/purple-boots.png)
 
 Notes: Do you need to pay for something? Better tools, more resources
        Is this someone's job? Should it be?
@@ -62,7 +62,7 @@ Notes: Do you need to pay for something? Better tools, more resources
 
 Pink = Care for People
 
-![Pink Slippers](../images/pink_slippers.png)
+![Pink Slippers](images/pink_slippers.png)
 
 Notes: check people are ok and don't feel blamed
 Are people stressed out? High emotions can get in the way of learning

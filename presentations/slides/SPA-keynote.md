@@ -9,7 +9,7 @@ revealOptions:
 # Sustaining Remote-First Teams
 
 #### @rachelcdavies @tes_engineering
-![Tes Logo](../images/tes_logo.jpg)
+![Tes Logo](./images/tes_logo.jpg)
 
 Notes:  
 Curious about how to build and sustain a ‘remote-first’ culture? At Tes we have more engineers working from home or travelling than sitting at a desk in our London office. Over the last few years we adapted our engineering practices to support small teams working in close collaboration over distance. Part of what sustains this way of working is the way we organise hack days and engineering weeks and other cross-team initiatives.
@@ -47,7 +47,7 @@ helping them to improve children's lives through education
 
 ## Your Background?
 
-![Hands](../images/hands.jpg)
+![Hands](images/hands.jpg)
 
 Notes: 
 Who works from home ?
@@ -76,7 +76,7 @@ Notes:
 
 ## Software is Special
 
-![Egg Cup](../images/egg-cup.jpg)
+![Egg Cup](images/egg-cup.jpg)
 
 Notes: I was trying to describe what it's like to make software to my neighbour. Software as a material is not like a physical material. If you make an egg-cup it can be used by 1 person at a time in the same location. If you make software, it can be used by many people in different locations at the same time.
 C'est n'est pas une pipe
@@ -85,7 +85,7 @@ C'est n'est pas une pipe
 
 ## The Office
 
-![The Office](../images/the-office2.jpg)
+![The Office](images/the-office2.jpg)
 
 Notes: Nothing we need to access the code is in the office.
 
@@ -140,6 +140,6 @@ Notes: Summing up ^^
 
 ## Thank You
 #### @rachelcdavies @tes_engineering
-![Tes Logo](../images/tes-career-hero.png)
+![Tes Logo](images/tes-career-hero.png)
 
 Notes: We're hiring :-)

@@ -10,7 +10,7 @@ revealOptions:
 # of Unit Tests 
 
 #### @rachelcdavies @tes_engineering
-![Tes Logo](../images/tes_logo.jpg)
+![Tes Logo](images/tes_logo.jpg)
 
 Notes:  
 Unit tests provide a quick way for us to confirm our code is working as we expect,
@@ -55,7 +55,7 @@ helping them to improve children's lives through education
 
 ## Your Background?
 
-![Hands](../images/hands.jpg)
+![Hands](images/hands.jpg)
 
 Notes: 
 Who is new to unit-testing?
@@ -82,7 +82,7 @@ There are lots of frameworks to help you write tests.
 
 ## What is a Unit Test?
 
-![Units](../images/units.png)
+![Units](images/units.png)
 
 https://www.martinfowler.com/bliki/UnitTest.html
 
@@ -95,7 +95,7 @@ Unit tests are organised into suites and can be run for a whole application.
 
 ## Test Frameworks
 
-![Many](../images/many.jpg)
+![Many](images/many.jpg)
 
 
 Notes: 
@@ -221,7 +221,7 @@ describe('email', () => {
 
 ## Solitary or Sociable?
 
-![Isolate](../images/isolate.png)
+![Isolate](images/isolate.png)
 
 https://www.martinfowler.com/bliki/UnitTest.html
 
@@ -244,9 +244,9 @@ Test-doubles stand in for code that the subject of the test relies on.
 
 ###  with 2 render states
 
-![Upload button](../images/upload-button-design.png)
+![Upload button](images/upload-button-design.png)
 
-![Trash button](../images/trash-design.png)
+![Trash button](images/trash-design.png)
 
 ----
 
@@ -495,6 +495,6 @@ Notes: Summing up ^^
 
 ## Thank You
 #### @rachelcdavies @tes_engineering
-![Tes Logo](../images/tes-career-hero.png)
+![Tes Logo](images/tes-career-hero.png)
 
 Notes: We're hiring :-)
