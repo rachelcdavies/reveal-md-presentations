@@ -55,6 +55,14 @@ I wanted to get off the commuter treadmill and realised that one of the blockers
 
 ---
 
+## View from my office
+
+![View](images/view.png)
+
+
+
+---
+
 ## Your Background?
 
 ![Hands](images/hands.jpg)
@@ -271,15 +279,15 @@ Weekly draw.
 * Swap every hour or so
 * Break to work solo for simple tasks
 
-Notes:
+Notes: 
 
 
 ----
 
-## Mentor
+## Regular 1:1 
+## checkin meetings
 
-
-Notes:
+Notes: all engineers have a mentor and a principal engineer with 1:1 meetings every couple of weeks
 
 ----
 
@@ -309,6 +317,16 @@ Notes:
 
 ## Survey: Benefits
 
+![Word-cloud-benefits](images/remote-benefits.png)
+
+Notes: 
+What are the benefits for you when working remotely?
+
+
+----
+
+## Survey: Benefits
+
 * Flexibility: time / place / family
 * Saves time & money spent on commuting
 * Removes travel stress
@@ -317,6 +335,15 @@ Notes:
 
 Notes: 
 What are the benefits for you when working remotely?
+
+----
+
+## Survey: Drawbacks
+
+![Word-cloud-drawbacks](images/remote-drawbacks.png)
+
+Notes: 
+What are the drawbacks for you when working remotely?
 
 ----
 
@@ -333,6 +360,18 @@ What are the drawbacks for you when working remotely?
 
 ----
 
+## Survey: Drawbacks
+
+![Word-cloud-tips](images/remote-tips.png)
+
+Notes: 
+What are the drawbacks for you when working remotely?
+
+Notes: 
+What tips do you have for a good remote work environment?
+
+----
+
 ## Survey: Tips
 
 * Dedicated comfortable workspace
@@ -343,6 +382,7 @@ What are the drawbacks for you when working remotely?
 
 Notes: 
 What tips do you have for a good remote work environment?
+
 
 ----
 
