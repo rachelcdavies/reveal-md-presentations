@@ -4,3 +4,5 @@ dist
 _static
 .vscode
 .DS_Store
+.swp
+
