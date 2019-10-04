@@ -81,16 +81,12 @@ Why do we share?
 
 ## Homogenous Services
 
-> Smart endpoints and dumb pipes
 * JS React/Node services
 * REST / RabbitMQ 
 
 Notes:
-Smart endpoints and dumb pipes
-supported by Engineering Guide
 Built from ex-TWers about 5 years old
-Although CTO/VP of Eng have left
-Our platform is composed predominantly of Node 8 (ES6) and React+Redux micro-services running in Docker containers in AWS, alongside our core CMS built in Drupal
+Stagnation vs Innovation
 
 ---
 
@@ -128,6 +124,12 @@ The Principal Engineer at Tes is responsible for looking after 1 - 3 teams and e
 
 ---
 
+## Package for consumption
+
+![SharingFood](images/MenuSharing_web_hero.jpg)
+
+---
+
 ## Sharing: Front-end 
 
 ![TesDesignSystem](images/TDS.png)
@@ -159,19 +161,35 @@ Some are open-source.
 
 ![ServiceExample](images/service-amqp2pdf.png)
 
-
 ---
 
 ## Sharing: Generic Tools
 
 ![Open Source](images/OpenSource.png)
 
-
 Notes:
 https://www.npmjs.com/~tesglobaladmin
 
 ---
 
+# Reasons for change?
+
+* Ecosystem moves on
+* Security holes
+* New features
+
+---
+
+## Challenges
+
+* Fear of touching old code
+* Lack of tests / docs
+* Preventing domain logic creeping in
+
+Notes: 
+retention
+
+---
 
 ![Time](images/time.jpg)
 
@@ -186,18 +204,8 @@ https://www.npmjs.com/~tesglobaladmin
  
 Notes: 
 Every last thursday of the month, the folks interested in the Frontend at tes topic (so, not app-specific frontend tasks) meet up and hack together on general/broad frontend related tasks. The day before (so, wed) there is a sort of quick "kick off" where we decide who is gonna work on what, and the morning after (so, fri) there is gonna be a sort of quick "retro" to see what has been done. If you want to participate just drop an email/message to the current frontend champion
-
----
-
-## Challenges
-
-* Fear of touching old code
-* Lack of tests / docs
-* Preventing domain logic creeping in
-* Stagnation vs Innovation
-
-Notes: 
-retention
+More like Spotify guilds
+No dedicated components guardians
 
 ---
 
@@ -209,6 +217,12 @@ retention
 * Ask on Slack
 
 Notes: 
+
+---
+
+## Engineering Guide
+
+![Engineering Guide](images/EngineeringGuide.png)
 
 ---
 
@@ -245,3 +259,4 @@ Summing up ^^
 ![Tes Logo](images/tes-career-hero.png)
 
 Notes: We're hiring :-)
+
