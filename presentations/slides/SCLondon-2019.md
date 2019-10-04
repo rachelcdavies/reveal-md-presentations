@@ -66,7 +66,8 @@ Add some questions here
 ![Care Bears](images/care-bears.jpg)
 
 
-Notes: Why do we share?
+Notes: 
+Why do we share?
 * using existing services saves time
 * reduce duplication
 
@@ -78,15 +79,18 @@ Notes: Why do we share?
 
 ---
 
-# Homogenous Services
+## Homogenous Services
 
+> Smart endpoints and dumb pipes
 * JS React/Node services
 * REST / RabbitMQ 
 
-Notes: 
+Notes:
+Smart endpoints and dumb pipes
 supported by Engineering Guide
 Built from ex-TWers about 5 years old
 Although CTO/VP of Eng have left
+Our platform is composed predominantly of Node 8 (ES6) and React+Redux micro-services running in Docker containers in AWS, alongside our core CMS built in Drupal
 
 ---
 
@@ -94,23 +98,39 @@ Although CTO/VP of Eng have left
 
 ![Engineering Week](images/engineering-week.png)
 
-Notes: 
+Notes:
 Remote workers so Slack channels
+Conversations in the open vs provate channels
+No architects
+Federate everything?
 
 ---
 
-# Organisation structure
+## Organisation structure
 
-* Cross-functional product teams responsible for vertical sliced services
-* Data, Platform teams responsible for infrastructure
-* Security team roving
-* New DX group 
+* Cross-functional product teams for verticals
+* Platform team responsible for infrastructure
+* Data team for pipeline
+* Security team support product teams
+
+Notes:
+* _New_ DX "group" 
+
 
 ---
 
-# Frontend 
+## Distributed Leadership
 
-### Tes Design System (TDS)
+![TesTeamRoles](images/TesTeamRoles.png)
+
+Notes: 
+The Principal Engineer at Tes is responsible for looking after 1 - 3 teams and ensuring that there are clear communication channels with other Principal Engineers (and thus the teams they were responsible for).
+
+---
+
+## Sharing: Front-end 
+
+![TesDesignSystem](images/TDS.png)
 * Styled components (buttons, checkboxes)
 * Styles (typography, colours)
 
@@ -122,11 +142,8 @@ https://www.tes.com/styleguide/elements/button
 
 ---
 
+## Sharing: Backend Utilities
 
-# Plumbing
-
-Stable services 
-* Page layout
 * Generating PDF documents
 * Sending emails
 * Sending SMS messages
@@ -138,7 +155,14 @@ Some are open-source.
 
 ---
 
-# Open Source
+## Example
+
+![ServiceExample](images/service-amqp2pdf.png)
+
+
+---
+
+## Sharing: Generic Tools
 
 ![Open Source](images/OpenSource.png)
 
@@ -148,26 +172,47 @@ https://www.npmjs.com/~tesglobaladmin
 
 ---
 
-# Dedicating Time
+
+![Time](images/time.jpg)
+
+---
+
+## Time to Maintain
 
 * Front-end days, 1 per month
 * Hack days, 2 per month
-* Tech debt days, coming soon 
-
+* Tech debt days, _coming soon_
+* _New_ DX "group" 
+ 
 Notes: 
 Every last thursday of the month, the folks interested in the Frontend at tes topic (so, not app-specific frontend tasks) meet up and hack together on general/broad frontend related tasks. The day before (so, wed) there is a sort of quick "kick off" where we decide who is gonna work on what, and the morning after (so, fri) there is gonna be a sort of quick "retro" to see what has been done. If you want to participate just drop an email/message to the current frontend champion
 
 ---
 
-# Challenges
+## Challenges
 
 * Fear of touching old code
+* Lack of tests / docs
 * Preventing domain logic creeping in
+* Stagnation vs Innovation
 
+Notes: 
+retention
 
 ---
 
-# Tes Culture
+## Navigation
+
+* Naming conventions
+* Engineering guide
+* Tech Standards
+* Ask on Slack
+
+Notes: 
+
+---
+
+## Tes Culture
 
 * Post-mortems on outages
 * Champions
@@ -176,8 +221,11 @@ Every last thursday of the month, the folks interested in the Frontend at tes to
 * Knowledge sharing
 
 Notes: 
-
 https://internal.tes.com/engineering/docs/how-to/have-a-post-mortem.html
+
+---
+
+![Sponge Bob](images/sharing-is-caring.jpg)
 
 ---
 
@@ -187,11 +235,8 @@ https://internal.tes.com/engineering/docs/how-to/have-a-post-mortem.html
 * Technical oversight (Principal/Systems Engineers)
 * Open communications (Slack)
 
-Notes: Summing up ^^
-
----
-
-![Sponge Bob](images/sharing-is-caring.jpg)
+Notes: 
+Summing up ^^
 
 ---
 
