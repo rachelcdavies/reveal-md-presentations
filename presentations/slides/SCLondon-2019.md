@@ -121,7 +121,7 @@ Notes:
 
 Notes: 
 The Principal Engineer at Tes is responsible for looking after 1 - 3 teams and ensuring that there are clear communication channels with other Principal Engineers (and thus the teams they were responsible for).
-
+Small teams
 ---
 
 ## Package for consumption
@@ -243,11 +243,20 @@ https://internal.tes.com/engineering/docs/how-to/have-a-post-mortem.html
 
 ---
 
+## Improving DX
+
+* Culture reflects in code quality
+* Taking responsibility to improve
+* Caring about consumers and maintainers
+
+---
+
 ## Summing Up
 
 * Hire crafts people who care
 * Technical oversight (Principal/Systems Engineers)
 * Open communications (Slack)
+* Culture **inextricably** linked to Architecture
 
 Notes: 
 Summing up ^^
