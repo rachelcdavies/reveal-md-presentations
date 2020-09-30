@@ -302,9 +302,8 @@ export const CounterComponent = ({ value }) => {
 }
 ```
 
-Notes:
-
 ---
+
 ## React Router Hooks
 
 from v5.1
@@ -319,9 +318,7 @@ function BlogPost() {
   return <div />;
 }
 ```
-
-Notes:
-
+---
 
 ## GraphQL 
 
@@ -354,6 +351,8 @@ const Dogs = ({ onDogSelected }) => {
   );
 }
 ```
+
+Notes:
 
 ---
 
