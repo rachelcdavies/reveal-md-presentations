@@ -34,8 +34,8 @@ Notes:
 * Digital education company
     * support and connect teachers and schools worldwide
 * 50+ full-stack engineers in 10 teams
-    * Remote-first culture
-    * 200+ Javascript micro-services Node/React 
+    * Javascript microservices 
+    * Remote-first culture before COVID
 
 Notes: 
        
@@ -53,34 +53,25 @@ Who is using React Hooks?
 # Introduction to 
 # React Hooks
 
-----
+---
 
-## What is a Hook?
+## Hooks?
 
 > _"Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class."_
 February 6, 2019
 
 Notes: 
-At Tes we prefer to write functional rather than class components.
-Challenge 1 – Hard to reuse stateful logic between different components
-Challenge 2 – Complex components are harder to understand
 
-----
+---
 
-## Functional vs Class Components
+## Functional Components
 
 - Less code
-- Functional components are much easier to read and test
-- Help separate container and presentational components
+- Easier to read and test
+- Separate container and presentational components
 
 Notes: 
-These can be typically defined using arrow functions
-The simplest way to define a component in React is to write a JavaScript function which accepts props and returns a React element.
-
-A class component requires you to extend from React.Component and create a render function which returns a React element
-https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108
-Stateless function components introduced in 2015 
-https://reactjs.org/blog/2015/10/07/react-v0.14.html#stateless-functional-components
+At Tes we prefer to write functional rather than class components.
 
 ---
 
@@ -112,7 +103,7 @@ Notes:
 
 - you can write your own custom hooks
 - you can use custom hooks from other frameworks
-    - react-redux, 
+    - react-redux, react-router, etc
 
 ---
 
@@ -159,31 +150,27 @@ import React, { useEffect } from 'react';
 
 const Counter() => {
     // called after each render
-    // similar to lifecycle events componentDidMount and componentDidUpdate
+    // similar to lifecycle componentDidMount and componentDidUpdate
   useEffect(() => {
     // manually change DOM in React using the browser API
     document.title = `You clicked ${count} times`;
-  });
-
+  }, [count]); // Only re-run the effect if count changes
 }
 ```
-Called after **every** render
-The function we pass **is** our effect
-Effects scheduled with useEffect don’t block the browser from updating the screen
+
+Called after **every** render. 
+The function we pass in **is** our effect
 
 Notes: 
-If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
 Operations like fetching data from API, setting up subscriptions and manually changing the DOM in React Component are called “side effects” or effects for short as they can affect other components and can’t be done before rendering. 
 
 ---
 
 ## Synchronous Effects
 
-Effects scheduled with `useEffect` don’t block the browser from updating the screen. This makes your app feel more responsive.
- 
-The majority of effects don’t need to happen synchronously.
- 
-To run your effect synchronously after all DOM mutations, try **useLayoutEffect** Hook 
+Effects scheduled with `useEffect` don’t block the browser from updating the screen. Can makes your app feel more responsive.
+  
+If you need to run your effect synchronously after all DOM mutations, another hook is available **useLayoutEffect** 
 
 ---
 
@@ -200,29 +187,33 @@ Ensure that all stateful logic in a component is clearly visible from its source
 
 ---
 
-## ESLint Plugin
+## Enforce Rules with ESLint
 
 - eslint-plugin-react-hooks
 
 Notes: 
-
-This ESLint plugin enforces the Rules of Hooks.
 
 ---
 
 ## Combining Hooks
 
 - setState from useEffect?
-    - commonly used for data fetching in a component
-- beware infinite re-render loop
-    - pass array as a 2nd argument
+    - commonly used for data fetching
+- beware infinite re-render loop!
+    - remember to pass array as a 2nd argument
     
-``` javascript    
+TRY NOT TO DO THIS
+``` javascript
 useEffect(() => {
-  document.title = `You clicked ${count} times`;
-}, [count]); // Only re-run the effect if count changes
-```    
+  setState({ ...state, a: props.a });
+}, [props.a]);
 
+useEffect(() => {
+  setState({ ...state, b: props.b });
+}, [props.b]);
+``` 
+https://codesandbox.io/s/confident-lederberg-dtx7w    
+    
 Notes: 
 useEffect is called after each render and when setState is used inside of it, it will cause the component to re-render which will call useEffect and so on and so on.
 
@@ -232,9 +223,27 @@ https://stackoverflow.com/questions/53715465/can-i-set-state-inside-a-useeffect-
 
 ---
 
+In previous code both useEffects run in the same react cycle.
+When you run the second setState it will replace the first setState.
+
+DO THIS INSTEAD
+
+``` javascript
+useEffect(() => {
+  setState(state => ({ ...state, a: props.a }));
+}, [props.a]);
+
+useEffect(() => {
+  setState(state => ({ ...state, b: props.b }));
+}, [props.b]);
+``` 
+Check the solution here: https://codesandbox.io/s/mutable-surf-nynlx
+
+---
+
 ## React Redux Hooks
 
-> React Redux supports Hooks since v7.1.0
+from v7.1.0
 
 ``` javascriptimport React from 'react'
 import { useSelector } from 'react-redux'
@@ -250,7 +259,7 @@ Notes:
 ---
 ## React Router Hooks
 
-React Router supports hooks since v5.1
+from v5.1
 
 ``` javascript
 import { useRouteMatch } from "react-router-dom";
@@ -269,7 +278,7 @@ Notes:
 
 ## Testing with React Hooks
 
-
+> Sorry I ran out of time so nothing here yet
 
 Notes:
 
@@ -278,7 +287,7 @@ Notes:
 
 ## React Hooks help you to ..
 
-* simplify design
+* simplify component design
 
 Notes: Summing up ^^
 
