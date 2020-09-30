@@ -24,6 +24,7 @@ We’ll also cover some factors to consider in using them and some examples of h
 * Full-stack software engineer
 * Work remotely for Tes
 * Busy writing Python nowadays
+* Covering for Data team lead
 
 Notes: 
 
@@ -33,9 +34,10 @@ Notes:
 
 * Digital education company
     * support and connect teachers and schools worldwide
-* 50+ full-stack engineers in 10 teams
+* Engineering at Tes
+    * 50+ full-stack engineers in 10 teams
     * Javascript microservices 
-    * Remote-first culture before COVID
+    * Remote-first culture **before** COVID
 
 Notes: 
        
@@ -83,7 +85,6 @@ At Tes we prefer to write functional rather than class components.
 
 Notes: 
 
-
 ---
 
 ### More React Hooks
@@ -101,8 +102,8 @@ Notes:
 
 ### Custom Hooks
 
-- you can write your own custom hooks
-- you can use custom hooks from other frameworks
+- you can write your **own** custom hooks
+- you can use custom hooks from **other** frameworks
     - react-redux, react-router, graphql, etc
 
 ---
@@ -179,8 +180,6 @@ If you need to run your effect synchronously after all DOM mutations, another ho
 
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-Accepts a context object, a value returned from React.createContext, and returns the current context value for that context
-
 ``` javascript
 // declared at top level in app
 const ThemeContext = React.createContext(themes.light);
@@ -246,6 +245,7 @@ Notes:
 useEffect is called after each render and when setState is used inside of it, it will cause the component to re-render which will call useEffect and so on and so on.
 
 One of the popular cases that using useState inside of useEffect will not cause an infinite loop is when you pass an empty array as a second argument to useEffect like useEffect(() => {....}, []) which means that the effect function should be called once: after the first mount/render only. 
+
 This is used widely when you're doing data fetching in a component and you want to save the request data in the component's state.
 https://stackoverflow.com/questions/53715465/can-i-set-state-inside-a-useeffect-hook
 
@@ -269,16 +269,36 @@ Check the solution here: https://codesandbox.io/s/mutable-surf-nynlx
 
 ---
 
+useReducer Hook
+
+``` javascript
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+```
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method. (If you’re familiar with Redux, you already know how this works.)
+
+useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+
+---
+
 ## React Redux Hooks
 
 from v7.1.0
 
-``` javascriptimport React from 'react'
-import { useSelector } from 'react-redux'
+``` javascript
+import React from 'react'
+import { useDispatch } from 'react-redux'
 
-export const CounterComponent = () => {
-  const counter = useSelector(state => state.counter)
-  return <div>{counter}</div>
+export const CounterComponent = ({ value }) => {
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      <span>{value}</span>
+      <button onClick={() => dispatch({ type: 'increment-counter' })}>
+        Increment counter
+      </button>
+    </div>
+  )
 }
 ```
 
